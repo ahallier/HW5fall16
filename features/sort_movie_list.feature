@@ -22,8 +22,10 @@ Background: movies have been added to database
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
-  # your scenario here
+  When I have selected the sort by title button
+  Then I should see "Amelie" before "Chocolat" 
 
 Scenario: sort movies in increasing order of release date
-  # your scenario here
+  When I have selected the sort by date button
+  Then I should see "Raiders of the Lost Ark" before "Amelie"
 
